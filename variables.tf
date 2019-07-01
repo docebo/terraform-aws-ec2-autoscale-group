@@ -228,9 +228,9 @@ variable "enabled_metrics" {
 }
 
 variable "wait_for_capacity_timeout" {
-  type        = string
+  type        = integer
   description = "A maximum duration that Terraform should wait for ASG instances to be healthy before timing out. Setting this to '0' causes Terraform to skip all Capacity Waiting behavior"
-  default     = "10m"
+  default     = 10
 }
 
 variable "min_elb_capacity" {
@@ -353,4 +353,3 @@ variable "cpu_utilization_low_statistic" {
   default     = "Average"
   description = "The statistic to apply to the alarm's associated metric. Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`"
 }
-
