@@ -239,6 +239,7 @@ variable "min_elb_capacity" {
 }
 
 variable "wait_for_elb_capacity" {
+  type        = bool
   description = "Setting this will cause Terraform to wait for exactly this number of healthy instances in all attached load balancers on both create and update operations. Takes precedence over `min_elb_capacity` behavior"
   default     = false
 }
